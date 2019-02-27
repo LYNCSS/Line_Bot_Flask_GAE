@@ -37,8 +37,8 @@ def callback():
 # 處理訊息
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
-    msg_file = open(r'Reply_Message\No_Such_Service.txt')
-    msg = msg_file.read()
+    #msg_file = open(r'Reply_Message\No_Such_Service.txt')
+    msg = '您好，城翔早午餐目前尚無提供回復對話的功能，不過我們有提供下列功能:'
     message = TextSendMessage(text=msg) #Encode event.message.text into which api can recognized
     line_bot_api.reply_message(event.reply_token, message) #reply encoded message as message to line server
 
