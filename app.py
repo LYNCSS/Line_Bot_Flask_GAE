@@ -36,7 +36,7 @@ def callback():
 
 # 處理訊息
 @handler.add(MessageEvent, message=TextMessage)
-def handle_message(event):
+def handle_mssage(event):
     message = TextSendMessage(text=event.message.text) #Encode event.message.text into which api can recognized
     line_bot_api.reply_message(event.reply_token, message) #reply encoded message as message to line server
 
