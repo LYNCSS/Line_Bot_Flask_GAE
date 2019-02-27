@@ -36,8 +36,10 @@ def callback():
 
 # 處理訊息
 @handler.add(MessageEvent, message=TextMessage)
-def handle_mssage(event):
-    message = TextSendMessage(text=event.message.text) #Encode event.message.text into which api can recognized
+def handle_message(event):
+    msg_file = open(r'Reply_Message\No_Such_Service.txt')
+    msg = msg_file.read()
+    message = TextSendMessage(text=msg) #Encode event.message.text into which api can recognized
     line_bot_api.reply_message(event.reply_token, message) #reply encoded message as message to line server
 
 import os
