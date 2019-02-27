@@ -35,7 +35,7 @@ def callback():
 
 
 # 處理訊息
-@handler.add(MessageEvent, message=TextMessage)
+@handler.add(MessageEvent, message=StickerMessage)
 def handle_message(event):
     #msg_file = open(r'Reply_Message\No_Such_Service.txt')
     msg = '您好，城翔早午餐目前尚無提供回復對話的功能，不過我們有提供下列功能:'
